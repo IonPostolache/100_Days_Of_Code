@@ -26,4 +26,6 @@ tip=input("How much tip would you like to give? 10, 12, or 15? ")
 people=input("How many people to split the bill? ")
 tip_percent=(int(tip)+100)/100
 pay_each=(float(bill) / int(people)) * tip_percent
-print(pay_each)
+#print(round(pay_each,2))
+print("{:.2f}".format(pay_each))
+
