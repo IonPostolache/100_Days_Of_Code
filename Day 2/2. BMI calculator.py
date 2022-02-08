@@ -26,13 +26,8 @@ weight = input("enter your weight in kg: ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-#print(type(height))
 height_fl=float(height)
-#print(type(height_fl))
 weight_fl=float(weight)
-#print(height)
-#bmi=int(weight)/(int(height)*int(height))
 bmi=weight_fl/(height_fl*height_fl)
-#print(bmi)
 print(weight +"÷(" +height +"x"+height+")= "+str(bmi))
 print(int(bmi))
