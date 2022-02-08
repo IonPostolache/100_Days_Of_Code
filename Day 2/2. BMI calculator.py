@@ -1,6 +1,7 @@
 """Instructions
 Write a program that calculates the Body Mass Index (BMI) from a user's weight and height.
-The BMI is a measure of some's weight taking into account their height. e.g. If a tall person and a short person both
+The BMI is a measure of some's weight taking into account their height.
+e.g. If a tall person and a short person both
  weigh the same amount, the short person is usually more overweight.
 The BMI is calculated by dividing a person's weight (in kg) by the square of their height (in m):
 https://cdn.fs.teachablecdn.com/jKHjnLrNQjqzdz3MTMyv
@@ -25,3 +26,13 @@ weight = input("enter your weight in kg: ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
+#print(type(height))
+height_fl=float(height)
+#print(type(height_fl))
+weight_fl=float(weight)
+#print(height)
+#bmi=int(weight)/(int(height)*int(height))
+bmi=weight_fl/(height_fl*height_fl)
+#print(bmi)
+print(weight +"÷(" +height +"x"+height+")= "+str(bmi))
+print(int(bmi))
