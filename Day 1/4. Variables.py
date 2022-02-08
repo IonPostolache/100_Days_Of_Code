@@ -24,9 +24,8 @@ b = input("b: ")
 ####################################
 #Write your code below this line 👇
 changed_a=b
-changed_b=a
+b=a
 a=changed_a
-b=changed_b
 #Write your code above this line 👆
 ####################################
 # 🚨 Don't change the code below 👇
