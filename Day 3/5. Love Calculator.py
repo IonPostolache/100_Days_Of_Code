@@ -57,14 +57,17 @@ name2 = input("What is their name? \n")
 
 lname1=name1.lower()
 lname2=name2.lower()
-#print(lname1)
 Trueword1=lname1.count("t")+lname1.count("r")+lname1.count("u")+lname1.count("e")
 Trueword2=lname2.count("t")+lname2.count("r")+lname2.count("u")+lname2.count("e")
 Truew=Trueword1+Trueword2
-#print(Truew)
 loveword1=lname1.count("l")+lname1.count("o")+lname1.count("v")+lname1.count("e")
 loveword2=lname2.count("l")+lname2.count("o")+lname2.count("v")+lname2.count("e")
 lovew=loveword1+loveword2
-#print(lovew)
-percentage=Truew+lovew
-print(percentage)
+lovescore=Truew+lovew
+
+if lovescore<10 or lovescore>90:
+    print(f"Your score is {lovescore}, you go together like coke and mentos.")
+elif lovescore>=40 and lovescore<=50:
+    print(f"Your score is {lovescore}, you are alright together.")
+else:
+    print(f"Your score is {lovescore}.")
