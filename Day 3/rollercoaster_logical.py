@@ -8,8 +8,8 @@ if height>=120:
         price=5
     elif age<18:
         price=7
-    elif age<55 and age>45:
-        price=0
+    elif age<=55 and age>=45:
+        print("It's free.")
     else:
         price=12
     print(f"Ticket price is {price}")
