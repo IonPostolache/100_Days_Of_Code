@@ -6,7 +6,7 @@ if height>=120:
     age=int(input("What is your age?"))
     if age<12:
         print("Ticket price is 5")
-    elif age <18:
+    elif age <=18:
         print("Ticket price is 7")
     else:
         print("Ticket price is 12")
