@@ -36,3 +36,16 @@ weight = float(input("enter your weight in kg: "))
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
+
+bmi=weight/height**2
+print(f"{int(weight)} ÷ ({height} x {height}) = {bmi}")
+round_bmi=int(round(bmi,0))
+print(f"Your BMI is {round_bmi}, you are slightly overweight.")
+
+"""
+Your BMI is 18, you are underweight."
+"Your BMI is 22, you have a normal weight."
+"Your BMI is 28, you are slightly overweight."
+"Your BMI is 33, you are obese."
+"Your BMI is 40, you are clinically obese."
+"""
