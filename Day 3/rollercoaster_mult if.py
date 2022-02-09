@@ -11,15 +11,14 @@ if height>=120:
     else:
         price=12
     print(f"Ticket price is {price}")
+    photos = input("Do you want photos? Y or N")
+    if photos == "Y":
+        price+=3
+    print(f"The total bill is {price}")
 
 else:
     print("Can't ride")
 
-photos=input("Do you want photos? ")
-if photos=="yes":
-    print(f"The total bill is {price+3}")
-elif photos=="no":
-    print(f"The total bill is {price}")
 
 
 
