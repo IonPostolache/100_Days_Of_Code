@@ -44,17 +44,11 @@ position = input("Where do you want to put the treasure? ")
 
 #Write your code below this row 👇
 
-rowno=int(position)%10
-columnno=int((int(position)-rowno)/10)
-print(columnno)
-print(rowno)
-if rowno==1:
-    row1[columnno-1]="X "
-elif rowno==2:
-    row2[columnno-1] = "X "
-elif rowno==3:
-    row3[columnno-1]="X "
+column_number=int(position[0])
+row_number=int(position[1])
 
+row_in_map=map[row_number-1]
+row_in_map[column_number-1]="X"
 
 #Write your code above this row 👆
 
