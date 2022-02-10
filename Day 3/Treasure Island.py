@@ -63,5 +63,15 @@ elif crossroad=="left":
         print("You get attacked by an angry trout. Game Over.")
     elif lake=="wait":
         door=input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?")
+        if door=="red":
+            print("It's a room full of fire. Game Over.")
+        elif door=="blue":
+            print("You enter a room of beasts. Game Over.")
+        elif door=="yellow":
+            print("You found the treasure! You Win!")
+        else:
+            print("Game over.")
+
+
 
 
