@@ -54,20 +54,19 @@ print("Your mission is to find the treasure.")
 #Write your code below this line 👇
 
 crossroad=input('You\'re at a crossroad. Where do you want to go? Type "left" or "right"')
-print(crossroad)
-if crossroad!="left":
+if crossroad.lower()!="left":
     print("Fall into a hole. Game over")
-elif crossroad=="left":
+elif crossroad.lower()=="left":
     lake=input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.')
-    if lake!="wait":
+    if lake.lower()!="wait":
         print("You get attacked by an angry trout. Game Over.")
-    elif lake=="wait":
+    elif lake.lower()=="wait":
         door=input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?")
-        if door=="red":
+        if door.lower()=="red":
             print("It's a room full of fire. Game Over.")
-        elif door=="blue":
+        elif door.lower()=="blue":
             print("You enter a room of beasts. Game Over.")
-        elif door=="yellow":
+        elif door.lower()=="yellow":
             print("You found the treasure! You Win!")
         else:
             print("Game over.")
