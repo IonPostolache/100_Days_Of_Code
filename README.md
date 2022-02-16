@@ -9,3 +9,6 @@ Day 3: Today I learned about Conditional Statements, Logical Operators. I've imp
 
 Day 4: Today I learned about generating random numbers, working with lists, etc. I've created a Head or Tails generator, a Banker Roulette, 
 a Treasure Map game, a two-dice generator and a Rock Paper Scissors game.
+     
+Day 5: Today I learned about for loops, range. I've created an Average Height calculator, High Score calculator, Addiing Even Numbers, A fizzBuzz game and a Password Geneator.
+
