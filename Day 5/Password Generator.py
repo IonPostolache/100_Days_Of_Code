@@ -17,9 +17,24 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 first_char=random.choice(letters)
-print(first_char)
+#print(first_char)
 #print(first_char+first_char)
-print(random.choice(letters)+random.choice(letters))
+#print(random.choice(letters)+random.choice(letters))
+
+password=""
+#print(password)
+for let in range(0, nr_letters):
+    password+=random.choice(letters)
+for sym in range(0, nr_symbols):
+    password+=random.choice(symbols)
+for num in range(0, nr_numbers):
+    password+=random.choice(numbers)
+
+print(password)
+
+
+
+
 
 
 
