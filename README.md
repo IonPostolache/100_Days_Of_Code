@@ -12,3 +12,4 @@ a Treasure Map game, a two-dice generator and a Rock Paper Scissors game.
      
 Day 5: Today I learned about for loops, range. I've created an Average Height calculator, High Score calculator, Adding Even Numbers, A FizzBuzz game and a Password Generator.
 
+Day 6: Today I learned about for Functions, indentation, while loops. I've completed the four Hurdles loop challenges, and the final project-Escaping the Maze at beginner level as well as the intermediate level.
