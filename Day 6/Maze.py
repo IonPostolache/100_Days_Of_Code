@@ -7,7 +7,7 @@ def turn_right():
     turn_left()
 
 def right():
-    for m in range(0, 5):
+    for m in range(0, 4):
         if right_is_clear():
             turn_right()
             move()
