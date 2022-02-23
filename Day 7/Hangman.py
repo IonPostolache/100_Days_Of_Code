@@ -11,8 +11,12 @@ word_list = ["aardvark", "baboon", "camel"]
 chosen_word=random.choice(word_list)
 print(chosen_word)
 guess=input("Please guess a letter:> ").lower()
-print(guess)
-if guess in chosen_word:
-    print("letter is in the word")
-elif guess not in chosen_word:
-    print("letter is not in the word")
+#print(guess)
+
+for a in chosen_word:
+    if guess==a:
+        print("right")
+    elif guess!=a:
+        print("wrong")
+
+
