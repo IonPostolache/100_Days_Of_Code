@@ -15,20 +15,27 @@ guess = input("Guess a letter: ").lower()
 
 display=[]
 for ch_let in chosen_word:
-    if ch_let==guess:
-        display.append(ch_let)
-    else:
-        display.append("_")
-print(display)
+    display.append("_")
 
 #TODO-2: - Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
-for letter in chosen_word:
-    if letter == guess:
-        print("Right")
-    else:
-        print("Wrong")
+
+display_new=[]
+for item in chosen_word:
+    if item==guess:
+        display_new=display.replace("_", guess)
+print(display)
+print(display_new)
+
+
+
+#strings = ["a", "ab", "aa", "c"]
+#new_strings = []
+#for string in strings:
+#new_string = string. replace("a", "1") Modify old string.
 
 #TODO-3: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
 #Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
+
+print(display)
