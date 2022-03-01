@@ -15,16 +15,17 @@ for _ in range(word_length):
 
 #TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
 
-guess = input("Guess a letter: ").lower()
+#guess = input("Guess a letter: ").lower()
 
 #Check guessed letter
-for position in range(word_length):
-    letter = chosen_word[position]
-    print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-    if letter == guess:
-        display[position] = letter
-
 while "_" in display:
     guess = input("Guess a letter: ").lower()
+    for position in range(word_length):
+        letter = chosen_word[position]
+        #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+        if letter == guess:
+            display[position] = letter
+    #print(display)
 
 print(display)
+print("You won")
