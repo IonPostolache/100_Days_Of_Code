@@ -13,20 +13,21 @@ def encrypt(text_arg, shift_arg):
     #shift = 5
     #cipher_text = "mjqqt"
     #print output: "The encoded text is mjqqt"
-    cypher_text=[]
+    cypher_text=""
+    #cypher_text=[]
     for letter in text_arg:
         current_index=alphabet.index(letter)
         new_index = current_index + shift_arg
         if new_index<=(len(alphabet)-1):
-            #print(f"the index is: {new_index}")
-            cypher_text.append(alphabet[new_index])
+            #cypher_text.append(alphabet[new_index])
+            cypher_text+=alphabet[new_index]
         elif new_index>(len(alphabet)-1):
             new_index=new_index-(len(alphabet)-1)
-            #print(f"index outside range is : {new_index}")
-            cypher_text.append(alphabet[new_index])
-        #print(alphabet[new_index])
-    concat_name = "".join(cypher_text)
-    print(f"The encoded text is {concat_name}")
+            #cypher_text.append(alphabet[new_index])
+            cypher_text+=alphabet[new_index]
+    #concat_name = "".join(cypher_text)
+    #print(f"The encoded text is {concat_name}")
+    print(f"The encoded text is {cypher_text}")
 
     ##HINT: How do you get the index of an item in a list:
     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
