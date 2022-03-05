@@ -17,10 +17,14 @@ def encrypt(text, shift):
     for letter in text:
         current_index=alphabet.index(letter)
         new_index=current_index+shift
+        if new_index>len(alphabet):
+            new_index=new_index-len(alphabet)
         cypher_text.append(alphabet[new_index])
         #print(alphabet[new_index])
     concat_name = "".join(cypher_text)
     print(f"The encoded text is {concat_name}")
+    last_index=len(alphabet)
+    #print(last_index)
 
     ##HINT: How do you get the index of an item in a list:
     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
