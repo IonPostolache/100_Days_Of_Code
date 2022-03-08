@@ -26,13 +26,17 @@ student_scores = {
 
 # TODO-1: Create an empty dictionary called student_grades.
 student_grades={}
-#print(student_scores)
 
 # TODO-2: Write your code below to add the grades to student_grades.👇
-for key in student_scores:
-    student_grades={key}
-    print(student_grades)
-
-
+for k,v in student_scores.items():
+    if v>91:
+        v="Outstanding"
+    elif v>80:
+        v="Exceeds Expectations"
+    elif v>70:
+        v="Acceptable"
+    else:
+        v="Fail"
+    student_grades[k]=v
 # 🚨 Don't change the code below 👇
 print(student_grades)
