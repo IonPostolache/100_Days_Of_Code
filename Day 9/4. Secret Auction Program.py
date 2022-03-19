@@ -1,6 +1,8 @@
 #from replit import clear
 #HINT: You can call clear() to clear the output in the console.
 #replit only works on replit website?
+import os
+from time import sleep
 
 from art import logo
 print(logo)
@@ -17,6 +19,8 @@ while flag==True:
 
     more_users=input("Are there other users who want to bid? 'yes' or 'no'.")
     if more_users=="yes":
+        os.system('clear')  # on linux / os x
+        print("\033[H\033[J")
         #clear()
         continue
     elif more_users=="no":
