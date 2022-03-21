@@ -17,3 +17,5 @@ Day 6: Today I learned about for Functions, indentation, while loops. I've compl
 Day 7: Today I've created a Hangman game.
 
 Day 8: Today I've created a Paint Area Calculator, a Prime Number Checker and a Caesar Cipher (encryption+decryption).
+
+Day 9: Today I've learned about Dictionaries, nesting dictionary, dictionary in a list, I've created a Grading Program and a Secret Auction Program.
