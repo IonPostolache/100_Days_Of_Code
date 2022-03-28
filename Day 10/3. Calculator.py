@@ -1,3 +1,4 @@
+from art import logo
 #Add
 def add(n1,n2):
     return n1+n2
@@ -14,14 +15,15 @@ def divide(n1,n2):
 operations={"+":add,"-":subtract, "*":multiply, "/":divide}
 
 def calculation():
-    num1=int(input("What is the first number? "))
+    print(logo)
+    num1=float(input("What is the first number? "))
     for k in operations.keys():
         print(k)
 
     continuation="y"
     while continuation!="n":
         operation_symbol=input("Pick an operation: ")
-        num3=int(input("What is the next number? "))
+        num3=float(input("What is the next number? "))
         answer_temp=operations[operation_symbol]
         second_answer=answer_temp(num1,num3)
         print(f"{num1} {operation_symbol} {num3} = {second_answer}")
