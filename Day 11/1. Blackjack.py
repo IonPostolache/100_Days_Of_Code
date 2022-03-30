@@ -28,34 +28,43 @@ your_card3=random.choice(cards)
 comp_card1=random.choice(cards)
 comp_card2=random.choice(cards)
 comp_card3=random.choice(cards)
-current_score=0
 comp_score=0
 
-start=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-print(logo)
-your_cards.append(your_card1)
-your_cards.append(your_card2)
-for i in your_cards:
-    current_score+=i
-#print(current_score)
-comp_cards.append(comp_card1)
+def blackjack():
+    print(logo)
+    your_cards.append(your_card1)
+    your_cards.append(your_card2)
+    current_score = 0
+    comp_score = 0
+    for i in your_cards:
+        current_score+=i
+    comp_cards.append(comp_card1)
 
-print(f"Your cards: {your_cards}, current score: {current_score}")
-print(f"Computer's first card: {comp_cards}")
-continuation=input("Type 'y' to get another card, type 'n' to pass: ")
-your_cards.append(your_card3)
-current_score += your_card3
-print(f"Your cards: {your_cards}, current score: {current_score}")
-print(f"Computer's first card: {comp_cards}")
-print(f"Your final hand: {your_cards}, final score: {current_score}")
-comp_cards.append(comp_card2)
-comp_cards.append(comp_card3)
+    print(f"Your cards: {your_cards}, current score: {current_score}")
+    print(f"Computer's first card: {comp_cards}")
+    get_card=input("Type 'y' to get another card, type 'n' to pass: ")
+    your_cards.append(your_card3)
+    current_score += your_card3
+    print(f"Your cards: {your_cards}, current score: {current_score}")
+    print(f"Computer's first card: {comp_cards}")
+    print(f"Your final hand: {your_cards}, final score: {current_score}")
+    comp_cards.append(comp_card2)
+    comp_cards.append(comp_card3)
 
-for j in comp_cards:
-    comp_score+=j
-print(f"Computer's final card: {comp_cards}, final score: {comp_score}")
-print("You went over. You lose 😤")
-continuation2=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    for j in comp_cards:
+        comp_score+=j
+    print(f"Computer's final card: {comp_cards}, final score: {comp_score}")
+    print("You went over. You lose 😤")
+    continuation2=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    if continuation2=="n":
+        return
+    elif continuation2=="y":
+        blackjack()
+
+start = input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+if start == "y":
+    blackjack()
+
 
 """Do you want to play a game of Blackjack? Type 'y' or 'n':
 Your cards: [10, 2], current score: 12
