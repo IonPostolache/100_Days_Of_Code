@@ -1,4 +1,5 @@
 from art import logo
+import random
 ############### Blackjack Project #####################
 
 #Difficulty Normal 😎: Use all Hints below to complete the project.
@@ -19,15 +20,44 @@ from art import logo
 ## The computer is the dealer.
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+your_cards=[]
+comp_cards=[]
+your_card1=random.choice(cards)
+your_card2=random.choice(cards)
+your_card3=random.choice(cards)
+comp_card1=random.choice(cards)
+comp_card2=random.choice(cards)
+comp_card3=random.choice(cards)
+current_score=0
+comp_score=0
 
 start=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 print(logo)
+your_cards.append(your_card1)
+your_cards.append(your_card2)
+for i in your_cards:
+    current_score+=i
+#print(current_score)
+comp_cards.append(comp_card1)
+
 print(f"Your cards: {your_cards}, current score: {current_score}")
-print(f"Computer's first card: {computer_first}")
+print(f"Computer's first card: {comp_cards}")
 continuation=input("Type 'y' to get another card, type 'n' to pass: ")
+your_cards.append(your_card3)
+current_score += your_card3
+print(f"Your cards: {your_cards}, current score: {current_score}")
+print(f"Computer's first card: {comp_cards}")
+print(f"Your final hand: {your_cards}, final score: {current_score}")
+comp_cards.append(comp_card2)
+comp_cards.append(comp_card3)
 
+for j in comp_cards:
+    comp_score+=j
+print(f"Computer's final card: {comp_cards}, final score: {comp_score}")
+print("You went over. You lose 😤")
+continuation2=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 
-Do you want to play a game of Blackjack? Type 'y' or 'n':
+"""Do you want to play a game of Blackjack? Type 'y' or 'n':
 Your cards: [10, 2], current score: 12
 Computer's first card: 10
 Type 'y' to get another card, type 'n' to pass: y
@@ -36,17 +66,16 @@ Computer's first card: 10
 Your final hand: [10, 2, 10], final score: 22
 Computer's final hand: [10, 5, 10], final score: 25
 You went over. You lose 😤
-Do you want to play a game of Blackjack? Type 'y' or 'n': y 
+Do you want to play a game of Blackjack? Type 'y' or 'n': y """
 
 
-
-Your cards: [10, 7], current score: 17
+"""Your cards: [10, 7], current score: 17
 Computer's first card: 9
 Type 'y' to get another card, type 'n' to pass: n
 Your final hand: [10, 7], final score: 17
 Computer's final hand: [9, 10], final score: 19
 You lose 😤
-Do you want to play a game of Blackjack? Type 'y' or 'n':
+Do you want to play a game of Blackjack? Type 'y' or 'n':"""
 
 
 
