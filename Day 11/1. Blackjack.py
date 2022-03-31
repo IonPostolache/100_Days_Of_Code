@@ -28,6 +28,7 @@ def blackjack():
     your_cards.append(random.choice(cards))
     your_cards.append(random.choice(cards))
     current_score = 0
+    comp_score = 0
     for i in your_cards:
         current_score+=i
     print(f"Your cards: {your_cards}, current score: {current_score}")
@@ -40,17 +41,39 @@ def blackjack():
             another_card=random.choice(cards)
             your_cards.append(another_card)
             current_score += another_card
+            #if 11 in your_cards it will subtract 10 everytime instead of only once
+            #need to solve this by transforming 11 in 1
+            if 11 in your_cards and current_score > 21:
+                #current_score = current_score - 10
+                for l in range(len(your_cards)):
+                    if your_cards[l]==11:
+                        your_cards[l]=1
+            #here I need to recalculate your_score again just in case 11 becomes 1,
+            #but to avoid the below situation:
+            """Your cards: [3, 11], current score: 14
+            Computer's first card: [4]
+            Type 'y' to get another card, type 'n' to pass: y
+            Your cards: [3, 1, 10], current score: 38
+            Computer's first card: [4]
+            Your final hand: [3, 1, 10], final score: 38"""
+
             print(f"Your cards: {your_cards}, current score: {current_score}")
             print(f"Computer's first card: {comp_cards}")
         elif get_card=="n":
             break
 
+    #if 11 in your_cards and current_score>21:
+        #current_score=current_score-10
+
     print(f"Your final hand: {your_cards}, final score: {current_score}")
-    comp_cards.append(random.choice(cards))
-    comp_cards.append(random.choice(cards))
-    comp_score = 0
-    for j in comp_cards:
-        comp_score+=j
+
+    while comp_score<17:
+        for j in comp_cards:
+            comp_score += j
+        comp_cards.append(random.choice(cards))
+        if comp_score>=17:
+            break
+
     print(f"Computer's final card: {comp_cards}, final score: {comp_score}")
     if current_score>21:
         print("You went over. You lose 😤")
@@ -58,6 +81,8 @@ def blackjack():
         print("Opponent went over. You win 😁")
     elif comp_score<=21 and current_score<comp_score:
         print("You lose 😤")
+    elif comp_score <= 21 and current_score == comp_score:
+        print("It's a draw")
     elif current_score <= 21 and current_score > comp_score:
         print("You win 😃")
 
