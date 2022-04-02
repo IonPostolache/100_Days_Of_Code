@@ -27,47 +27,55 @@ def blackjack():
     comp_cards = []
     your_cards.append(random.choice(cards))
     your_cards.append(random.choice(cards))
-    current_score=sum(your_cards)
-    comp_score = sum(comp_cards)
-    print(f"Your cards: {your_cards}, current score: {current_score}")
     comp_cards.append(random.choice(cards))
-    print(f"Computer's first card: {comp_cards}")
+    comp_cards.append(random.choice(cards))
 
-    while current_score<=21:
-        get_card=input("Type 'y' to get another card, type 'n' to pass: ")
-        if get_card=="y":
-            another_card=random.choice(cards)
-            your_cards.append(another_card)
-            current_score = sum(your_cards)
-            print(f"Your cards: {your_cards}, current score: {current_score}")
-            print(f"Computer's first card: {comp_cards}")
-        elif get_card=="n":
-            break
+    print(f"Your cards: {your_cards}, current score: {sum(your_cards)}")
+    print(f"Computer's first card: {comp_cards[0]}")
 
-        if current_score > 21:
-            for l in range(len(your_cards)):
-                if your_cards[l]==11:
-                    your_cards[l]=1
-        current_score = sum(your_cards)
+    comp_flag=False
+    if 10 in comp_cards and 11 in comp_cards:
+        comp_flag=True
 
-    print(f"Your final hand: {your_cards}, final score: {current_score}")
+    user_flag=False
+    if 10 in your_cards and 11 in your_cards:
+        user_flag=True
 
-    while comp_score<17:
-        comp_cards.append(random.choice(cards))
-        comp_score = sum(comp_cards)
-        if comp_score>=17:
-            break
+    if comp_flag==False and user_flag==False:
+        while sum(your_cards)<=21:
+            get_card=input("Type 'y' to get another card, type 'n' to pass: ")
+            if get_card=="y":
+                another_card=random.choice(cards)
+                your_cards.append(another_card)
+                print(f"Your cards: {your_cards}, current score: {sum(your_cards)}")
+                print(f"Computer's first card: {comp_cards}")
+            elif get_card=="n":
+                break
 
-    print(f"Computer's final card: {comp_cards}, final score: {comp_score}")
-    if current_score>21:
+            if sum(your_cards) > 21:
+                for l in range(len(your_cards)):
+                    if your_cards[l]==11:
+                        your_cards[l]=1
+
+        while sum(comp_cards) < 17:
+            comp_cards.append(random.choice(cards))
+            if sum(comp_cards) >= 17:
+                break
+
+    print(f"Your final hand: {your_cards}, final score: {sum(your_cards)}")
+    print(f"Computer's final card: {comp_cards}, final score: {sum(comp_cards)}")
+
+    if comp_flag==True:
+        print("Lose, opponent has Blackjack 😱")
+    elif sum(your_cards)>21:
         print("You went over. You lose 😤")
-    elif current_score<=21 and comp_score>21:
+    elif sum(your_cards)<=21 and sum(comp_cards)>21:
         print("Opponent went over. You win 😁")
-    elif comp_score<=21 and current_score<comp_score:
+    elif sum(comp_cards)<=21 and sum(your_cards)<sum(comp_cards):
         print("You lose 😤")
-    elif comp_score <= 21 and current_score == comp_score:
+    elif sum(comp_cards) <= 21 and sum(your_cards) == sum(comp_cards):
         print("It's a draw")
-    elif current_score <= 21 and current_score > comp_score:
+    elif sum(your_cards) <= 21 and sum(your_cards) > sum(comp_cards):
         print("You win 😃")
 
     continuation2=input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
@@ -79,8 +87,6 @@ def blackjack():
 start = input(f"Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 if start == "y":
     blackjack()
-
-
 
 
 ##################### Hints #####################
