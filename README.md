@@ -19,3 +19,5 @@ Day 7: Today I've created a Hangman game.
 Day 8: Today I've created a Paint Area Calculator, a Prime Number Checker and a Caesar Cipher (encryption+decryption).
 
 Day 9: Today I've learned about Dictionaries, nesting dictionary, dictionary in a list, I've created a Grading Program and a Secret Auction Program.
+
+Day 10: Today I've created a Blackjack game using Hints 1 and 2 only. After completion and watching the solution I think probably I can optimize the code by creating and using more functions.
