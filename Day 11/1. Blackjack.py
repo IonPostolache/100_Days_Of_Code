@@ -67,6 +67,8 @@ def blackjack():
 
     if comp_flag==True:
         print("Lose, opponent has Blackjack 😱")
+    elif user_flag==True and comp_flag==False:
+        print("You win, you have Blackjack 😁")
     elif sum(your_cards)>21:
         print("You went over. You lose 😤")
     elif sum(your_cards)<=21 and sum(comp_cards)>21:
