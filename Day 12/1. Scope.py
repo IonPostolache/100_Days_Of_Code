@@ -7,5 +7,6 @@ def increase_enemies():
   print(f"enemies inside function: {enemies}")
   return enemies+3
 
+
 enemies=increase_enemies()
 print(f"enemies outside function: {enemies}")
