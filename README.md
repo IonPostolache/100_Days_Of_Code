@@ -20,4 +20,8 @@ Day 8: Today I've created a Paint Area Calculator, a Prime Number Checker and a 
 
 Day 9: Today I've learned about Dictionaries, nesting dictionary, dictionary in a list, I've created a Grading Program and a Secret Auction Program.
 
-Day 10: Today I've created a Blackjack game using Hints 1 and 2 only. After completion and watching the solution I think probably I can optimize the code by creating and using more functions.
+Day 10: Today I learned about functions with outputs and I've created a Leap year calculator and a calculator with operations: add, subtract, multiply, divide.
+
+Day 11: Today I've created a Blackjack game using Hints 1 and 2 only. After completion and watching the solution I think probably I can optimize the code by creating and using more functions.
+
+Day 12: I learned about Global Scope and I've created a Number Guessing Game.
