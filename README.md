@@ -25,3 +25,5 @@ Day 10: Today I learned about functions with outputs and I've created a Leap yea
 Day 11: Today I've created a Blackjack game using Hints 1 and 2 only. After completion and watching the solution I think probably I can optimize the code by creating and using more functions.
 
 Day 12: I learned about Global Scope and I've created a Number Guessing Game.
+
+Day 13: Today I learned about debugging and I've debugged several codes.
