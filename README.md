@@ -27,3 +27,5 @@ Day 11: Today I've created a Blackjack game using Hints 1 and 2 only. After comp
 Day 12: I learned about Global Scope and I've created a Number Guessing Game.
 
 Day 13: Today I learned about debugging and I've debugged several codes.
+
+Day 14: Today I've created a Higher Lower Game.
