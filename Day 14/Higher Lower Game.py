@@ -10,9 +10,6 @@ def random_generator():
     return generated
 
 
-ran_a = random_generator()
-ran_b = random_generator()
-
 flag = True
 
 
@@ -20,7 +17,8 @@ def play():
     """function to play Higher Lower game"""
     print(logo)
     new_score = 0
-    t_ran_a = ran_a
+    t_ran_a = random_generator()
+    a_follower = data[t_ran_a]['follower_count']
     while flag:
         ran_b2 = random_generator()
         print(
@@ -29,12 +27,12 @@ def play():
         print(f"Against B: {data[ran_b2]['name']}, a {data[ran_b2]['description']}, from {data[ran_b2]['country']}.")
         selection = input("Who has more followers? Type 'A' or 'B': ")
         print(logo)
-        if (selection == "A" and data[t_ran_a]['follower_count'] > data[ran_b2]['follower_count']) or \
-                (selection == "B" and data[t_ran_a]['follower_count'] < data[ran_b2]['follower_count']):
+        if (selection == "A" and a_follower > data[ran_b2]['follower_count']) or \
+                (selection == "B" and a_follower < data[ran_b2]['follower_count']):
             new_score += 1
             print(f"You're right! Current score: {new_score}.")
-        elif (selection == "A" and data[t_ran_a]['follower_count'] < data[ran_b2]['follower_count']) or \
-                (selection == "B" and data[t_ran_a]['follower_count'] > data[ran_b2]['follower_count']):
+        elif (selection == "A" and a_follower < data[ran_b2]['follower_count']) or \
+                (selection == "B" and a_follower > data[ran_b2]['follower_count']):
             new_score -= 1
             if new_score < 0:
                 new_score = 0
