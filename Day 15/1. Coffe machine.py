@@ -73,7 +73,7 @@ def insert_coins():
     nickles = 0.05 * int(input("how many nickles?: "))
     pennies = 0.01 * int(input("how many pennies?: "))
     monetary_value = quarters + dimes + nickles + pennies
-    print(f"monetary value is : {monetary_value}")
+    print(f"monetary value is : {round(monetary_value,2)}")
     return monetary_value
 
 
@@ -108,7 +108,7 @@ def money_check(prompt, monetary_value):
     elif monetary_value >= drink_cost:
         machine_profit += drink_cost
         if monetary_value > drink_cost:
-            print(f"Here is ${change} dollars in change.")
+            print(f"Here is ${round(change, 2)} dollars in change.")
         return True
 
 
