@@ -8,11 +8,8 @@ report_message = "report"
 menu = Menu()
 available_menu_items = menu.get_items()
 drinks = available_menu_items.split("/")[0:-1]
-# print(drinks)
-
 coffe_maker = CoffeeMaker()
 money_machine = MoneyMachine()
-menu_item = MenuItem()
 
 
 def users_prompt():
@@ -26,12 +23,10 @@ def main_function():
         if response == report_message:
             coffe_maker.report()
         elif response in drinks:
-            # print("yes, response in drinks")
             drink = menu.find_drink(response)
-            # print(f"found drink: {drink.name}")
             if coffe_maker.is_resource_sufficient(drink):
-                money_machine.make_payment(menu_item.cost)
-
+                drink_cost = drink.cost
+                money_machine.make_payment(drink_cost)
                 coffe_maker.make_coffee(drink)
 
         response = users_prompt()
@@ -39,4 +34,3 @@ def main_function():
 
 
 main_function()
-
