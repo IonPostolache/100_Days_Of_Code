@@ -17,3 +17,5 @@ Day 12: I learned about Global Scope and I've created a Number Guessing Game.
 Day 13: Today I learned about debugging and I've debugged several codes.
 Day 14: Today I've created a Higher Lower Game.
 Day 15: Pycharm installation and Coffe Machine program.
+Day 16: Build a Coffee machine using OOP.
+Day 17: Created a QuizBrain using OOP.
