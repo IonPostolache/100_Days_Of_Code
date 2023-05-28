@@ -1,4 +1,4 @@
-from menu import Menu, MenuItem
+from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
@@ -22,11 +22,10 @@ def main_function():
     while response != turning_off_message:
         if response == report_message:
             coffe_maker.report()
+            money_machine.report()
         elif response in drinks:
             drink = menu.find_drink(response)
-            if coffe_maker.is_resource_sufficient(drink):
-                drink_cost = drink.cost
-                money_machine.make_payment(drink_cost)
+            if coffe_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
                 coffe_maker.make_coffee(drink)
 
         response = users_prompt()
